@@ -66,7 +66,8 @@ class Program
         Console.WriteLine("\nCity data:");
         foreach (City city in cities)
         {
-            Console.WriteLine("ID: {0}, Name: {1}, Neighbors: {2}", city.Id, city.Name, string.Join(",", city.Neighbors));
+            int covidLevel = 0;
+            Console.WriteLine("ID: {0}, Name: {1}, CovidLevel: {2}", city.Id, city.Name, string.Join(",", covidLevel));
         }
     }
 }
