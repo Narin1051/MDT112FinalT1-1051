@@ -1,0 +1,15 @@
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\bin\Debug\net6.0\Final-Test.exe
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\bin\Debug\net6.0\Final-Test.deps.json
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\bin\Debug\net6.0\Final-Test.runtimeconfig.json
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\bin\Debug\net6.0\Final-Test.dll
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\bin\Debug\net6.0\Final-Test.pdb
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\obj\Debug\net6.0\Final-Test.csproj.AssemblyReference.cache
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\obj\Debug\net6.0\Final-Test.GeneratedMSBuildEditorConfig.editorconfig
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\obj\Debug\net6.0\Final-Test.AssemblyInfoInputs.cache
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\obj\Debug\net6.0\Final-Test.AssemblyInfo.cs
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\obj\Debug\net6.0\Final-Test.csproj.CoreCompileInputs.cache
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\obj\Debug\net6.0\Final-Test.dll
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\obj\Debug\net6.0\refint\Final-Test.dll
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\obj\Debug\net6.0\Final-Test.pdb
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\obj\Debug\net6.0\Final-Test.genruntimeconfig.cache
+D:\AUniWorkchop\Y1.2\ClassMDT112\Final-Test1\obj\Debug\net6.0\ref\Final-Test.dll

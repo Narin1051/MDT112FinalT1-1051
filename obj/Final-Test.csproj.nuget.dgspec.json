@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\AUniWorkchop\\Y1.2\\ClassMDT112\\Final-Test\\Final-Test.csproj": {}
+    "D:\\AUniWorkchop\\Y1.2\\ClassMDT112\\Final-Test1\\Final-Test.csproj": {}
   },
   "projects": {
-    "D:\\AUniWorkchop\\Y1.2\\ClassMDT112\\Final-Test\\Final-Test.csproj": {
+    "D:\\AUniWorkchop\\Y1.2\\ClassMDT112\\Final-Test1\\Final-Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\AUniWorkchop\\Y1.2\\ClassMDT112\\Final-Test\\Final-Test.csproj",
+        "projectUniqueName": "D:\\AUniWorkchop\\Y1.2\\ClassMDT112\\Final-Test1\\Final-Test.csproj",
         "projectName": "Final-Test",
-        "projectPath": "D:\\AUniWorkchop\\Y1.2\\ClassMDT112\\Final-Test\\Final-Test.csproj",
+        "projectPath": "D:\\AUniWorkchop\\Y1.2\\ClassMDT112\\Final-Test1\\Final-Test.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\AUniWorkchop\\Y1.2\\ClassMDT112\\Final-Test\\obj\\",
+        "outputPath": "D:\\AUniWorkchop\\Y1.2\\ClassMDT112\\Final-Test1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
