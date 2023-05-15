@@ -1,100 +1,72 @@
-﻿namespace CovidSimulation
+﻿using System;
+using System.Collections.Generic;
+
+class City
 {
-    class City
+    public string Name { get; set; }
+    public int Id { get; set; }
+    public List<int> Neighbors { get; set; }
+
+    public City(string name, int id)
     {
-        public int id;
-        public string name;
-        public int infectedLevel = 0;
-        public int connectedCityId;
-        public City(int id, string name, int connectedCityId)
-        {
-            this.id = id;
-            this.name = name;
-            this.connectedCityId = connectedCityId;
-        }
+        Name = name;
+        Id = id;
+        Neighbors = new List<int>();
     }
+}
 
-    class Program
+class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        // รับจำนวนเมือง
+        Console.Write("Enter the number of cities: ");
+        int numCities = int.Parse(Console.ReadLine());
+
+        // สร้าง List เก็บเมืองทั้งหมด
+        List<City> cities = new List<City>();
+
+        // รับข้อมูลของแต่ละเมือง
+        for (int i = 0; i < numCities; i++)
         {
-            Console.Write("Enter the number of cities: ");
-            int numCities = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter data for city {0}:", i);
 
-            City[] cities = new City[numCities];
-            for (int i = 0; i < numCities; i++)
+            // รับชื่อเมือง
+            Console.Write("Name: ");
+            string name = Console.ReadLine();
+
+            // สร้างเมือง
+            City city = new City(name, i);
+
+            // รับจำนวนเมืองที่ติดต่อกับเมืองนี้
+            Console.Write("Number of neighbors: ");
+            int numNeighbors = int.Parse(Console.ReadLine());
+
+            // รับเมืองที่ติดต่อกับเมืองนี้
+            Console.Write("IDs of neighbors: ");
+            for (int j = 0; j < numNeighbors; j++)
             {
-                Console.Write("Enter city name: ");
-                string name = Console.ReadLine();
-                Console.Write("Enter number of cities connected to this city: ");
-                int numConnected = int.Parse(Console.ReadLine());
-
-                int connectedCityId = -1;
-                do
+                int neighborId = int.Parse(Console.ReadLine());
+                if (neighborId < 0 || neighborId >= numCities || neighborId == i || city.Neighbors.Contains(neighborId))
                 {
-                    Console.Write("Enter the IDs of connected cities (separated by space): ");
-                    string[] connectedCityIds = Console.ReadLine().Split(' ');
-
-                    if (connectedCityIds.Length == numConnected)
-                    {
-                        bool isValid = true;
-                        for (int j = 0; j < connectedCityIds.Length; j++)
-                        {
-                            int id = int.Parse(connectedCityIds[j]);
-                            if (id >= numCities || id == i || id == connectedCityId)
-                            {
-                                isValid = false;
-                                Console.WriteLine("Invalid ID");
-                                break;
-                            }
-                            else
-                            {
-                                connectedCityId = id;
-                            }
-                        }
-                        if (isValid) break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid input");
-                    }
-                } while (true);
-
-                cities[i] = new City(i, name, connectedCityId);
-            }
-
-            while (true)
-            {
-                Console.Write("Enter an event (Outbreak, Vaccinate, Lockdown): ");
-                string eventName = Console.ReadLine();
-
-                if (eventName == "Outbreak" || eventName == "Vaccinate" || eventName == "Lockdown")
-                {
-                    Console.Write("Enter the ID of the affected city: ");
-                    int affectedCityId = int.Parse(Console.ReadLine());
-
-                    City affectedCity = cities[affectedCityId];
-                    if (eventName == "Outbreak")
-                    {
-                        affectedCity.infectedLevel++;
-                    }
-                    else if (eventName == "Vaccinate")
-                    {
-                        affectedCity.infectedLevel = Math.Max(0, affectedCity.infectedLevel - 1);
-                    }
-                    else if (eventName == "Lockdown")
-                    {
-                        City connectedCity = cities[affectedCity.connectedCityId];
-                        connectedCity.infectedLevel = Math.Max(0, connectedCity.infectedLevel - 1);
-                    }
-
-                    Console.WriteLine("City {0}: {1}, Infected Level: {2}", affectedCity.id, affectedCity.name, affectedCity.infectedLevel);
+                    Console.WriteLine("Invalid ID");
+                    j--;
                 }
                 else
                 {
-                    Console.WriteLine("Invalid event");
+                    city.Neighbors.Add(neighborId);
                 }
             }
+
+            // เพิ่มเมืองลงใน List
+            cities.Add(city);
+        }
+
+        // แสดงข้อมูลของเมืองทั้งหมด
+        Console.WriteLine("\nCity data:");
+        foreach (City city in cities)
+        {
+            Console.WriteLine("ID: {0}, Name: {1}, Neighbors: {2}", city.Id, city.Name, string.Join(",", city.Neighbors));
         }
     }
 }
